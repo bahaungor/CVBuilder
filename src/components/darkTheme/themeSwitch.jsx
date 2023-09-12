@@ -3,9 +3,9 @@ import './themeSwitch.css'
 
 export default function ThemeSwitch(){
     const [theme, setTheme] = useState('dark');
+    const root = document.documentElement;
     const HandleButtonClick = () => {
         theme === 'dark' ? setTheme('light') : setTheme('dark');
-        const root = document.documentElement;
         root.className === 'dark' ? root.removeAttribute('class') : root.className = 'dark';
     }
 

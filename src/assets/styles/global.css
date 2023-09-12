@@ -89,17 +89,6 @@ body{
     color: var(--text);
 }
 
-header{
-    font-family: var(--font);
-    border-bottom: var(--border);
-    background-color: var(--bg2);
-}
-
-footer{
-    border-top: var(--border);
-    background-color: var(--bg2);
-}
-
 #root{
     display: flex;
     flex-direction: column;

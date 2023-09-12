@@ -1,0 +1,15 @@
+main{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 20px;
+}
+
+.preview{
+    background-color: var(--bg3);
+    flex: 8 250px
+}
+
+.settings{
+    background-color: var(--bg3);
+    flex: 3 150px
+}
