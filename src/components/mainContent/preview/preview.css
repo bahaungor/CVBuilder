@@ -1,0 +1,20 @@
+.preview{
+    background-color: var(--bg);
+    flex: 1 600px;
+    max-width: 900px;
+}
+
+.personalSection{
+    background-color: var(--bg3);
+    border: var(--border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 10px;
+}
+
+.preview .sub {
+    display: flex;
+    gap: 20px;
+    font-size: 1.1rem;
+}
