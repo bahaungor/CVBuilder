@@ -1,15 +1,20 @@
 main{
+    padding: 15px;
     display: flex;
-    flex-wrap: wrap-reverse;
-    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
 }
 
 .preview{
-    background-color: var(--bg3);
-    flex: 8 250px
+    background-color: var(--bg);
+    min-width: 794px;
+    height: 1123px;
+    box-shadow: var(--shadow);
 }
 
 .settings{
-    background-color: var(--bg3);
-    flex: 3 150px
+    background-color: var(--bg);
+
+    width: 400px;
 }

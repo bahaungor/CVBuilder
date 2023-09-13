@@ -7,7 +7,7 @@ header{
     padding: 10px;
     font-family: var(--font);
     border-bottom: var(--border);
-    background-color: var(--bg2);
+    background-color: var(--bg);
 }
 
 .header{
