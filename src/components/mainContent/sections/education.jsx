@@ -4,18 +4,19 @@ import Form from "./form"
 export default function Education({education, setEducation}){
     const [formVisibility, setformVisibility] = useState(false)
 
-    function UpdateEducation(e){
-        e.preventDefault()
-        education[education.length] = {
-            school:e.target[0].value, 
-            degree:e.target[1].value, 
-            startDate:e.target[2].value, 
-            endDate:e.target[3].value,
-            location:e.target[4].value
-        }
-    setEducation(education)
+function UpdateEducation(e){
+    e.preventDefault()
+    const newEntry = {
+        school: e.target[0].value,
+        degree: e.target[1].value,
+        startDate: e.target[2].value,
+        endDate: e.target[3].value,
+        location: e.target[4].value,
+        };
+    const newEduArray = [...education, newEntry];
+    setEducation(newEduArray)
     setformVisibility(false)
-    }
+}
  
 
     return(

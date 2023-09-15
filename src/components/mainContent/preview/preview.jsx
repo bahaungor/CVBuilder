@@ -24,8 +24,29 @@ export default function Preview({personal, education, experience}){
                                 <div>{element.location}</div>
                             </div>
                             <div className="sub2">
-                            {element.school}
+                            <div style={{fontWeight:'700'}}>{element.school}</div>
                             <div>{element.degree}</div>
+                            </div>
+                        </div>
+                    )}
+                    </div>
+                </>
+                }
+            </div>
+            <div className="education">
+                {experience.length==0?<></>:
+                <>
+                    <div style={{backgroundColor:'var(--bg3)', fontSize:'1.3rem', fontWeight:'900', padding:'5px', textAlign:'center'}}>Experience</div>
+                    <div className="educationList">
+                        {experience.map((element,i) => 
+                        <div key={i} style={{display:'flex', gap:'40px', marginTop:'20px'}}>
+                            <div className="sub1" style={{display:'flex', flexDirection:'column',alignItems:'center'}}>
+                                {element.startDate} - {element.endDate}
+                                <div>{element.location}</div>
+                            </div>
+                            <div className="sub2">
+                            <div style={{fontWeight:'700'}}>{element.company}</div>
+                            <div>{element.position}</div>
                             </div>
                         </div>
                     )}

@@ -6,15 +6,16 @@ export default function Experience({experience, setExperience}){
 
     function UpdateExperience(e){
         e.preventDefault()
-        experience[experience.length] = {
+        const newEntry = {
             company:e.target[0].value, 
             position:e.target[1].value, 
             startDate:e.target[2].value, 
             endDate:e.target[3].value,
             location:e.target[4].value
         }
-    setExperience(experience)
-    setformVisibility(false)
+        const newExpArray = [...experience, newEntry];
+        setExperience(newExpArray)
+        setformVisibility(false)
     }
 
     return(
