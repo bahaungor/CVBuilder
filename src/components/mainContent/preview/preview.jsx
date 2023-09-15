@@ -1,7 +1,7 @@
 import './preview.css'
 
-export default function Preview({personal}){
-
+export default function Preview({personal, education, experience}){
+    console.log(education)
     return(
         <div className="preview">
             <div className='personalSection'>
@@ -11,6 +11,27 @@ export default function Preview({personal}){
                     <div className="phone">📞 {personal.phone}</div>
                     <div className="address">📍 {personal.address}</div>
                 </div>
+            </div>
+            <div className="education">
+                {education.length==0?<></>:
+                <>
+                    <div style={{backgroundColor:'var(--bg3)', fontSize:'1.3rem', fontWeight:'900', padding:'5px', textAlign:'center'}}>Education</div>
+                    <div className="educationList">
+                        {education.map((element,i) => 
+                        <div key={i} style={{display:'flex', gap:'40px', marginTop:'20px'}}>
+                            <div className="sub1" style={{display:'flex', flexDirection:'column',alignItems:'center'}}>
+                                {element.startDate} - {element.endDate}
+                                <div>{element.location}</div>
+                            </div>
+                            <div className="sub2">
+                            {element.school}
+                            <div>{element.degree}</div>
+                            </div>
+                        </div>
+                    )}
+                    </div>
+                </>
+                }
             </div>
         </div>
     )
